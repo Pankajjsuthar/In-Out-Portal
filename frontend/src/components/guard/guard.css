@@ -1,0 +1,24 @@
+/* :root {
+    --primary-color: #1092af;
+    --secondary-color: #cfe9ff;
+} */
+
+body {
+    background-color: #0f0e0e;
+    background-image: url(../image/LRM_EXPORT_20210512_215848.jpg);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.guard-page .tickets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    /* 4 equal columns */
+    grid-auto-rows: minmax(100px, auto);
+    /* minimum height of 100px, expand to fit content */
+    grid-gap: 10px;
+}

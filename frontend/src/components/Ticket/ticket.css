@@ -1,0 +1,94 @@
+.grid {
+    align-content: center;
+
+}
+
+.ticket-container {
+    width:80%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+    margin: 10px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+
+.ticket {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .ticket__image-container {
+    /* object-fit: cover; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 20px;
+    align-content: center;
+    width: 70%;
+    height: 130px;
+  }
+
+  .user-image-container {
+    width: 80%; 
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+  }
+  
+  /* .ticket__image {
+    background-image: url('../image/IMG_9873.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 200px;
+
+  } */
+  
+  .ticket__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+  
+  .entries {
+  
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+  }
+  
+
+  
+  .ticket__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .ticket__actions button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
