@@ -5,7 +5,7 @@ import axios from "axios";
 const Test1 = (props) => {
   
   useEffect(() =>{
-    axios.get('http://localhost:8082/api/users/test')
+    axios.get('https://in-out.onrender.com/api/users/test')
     .then((res) =>{
       console.log(res.data);
     })

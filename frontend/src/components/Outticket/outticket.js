@@ -20,7 +20,7 @@ function Outticket() {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:8082/api/users/details/${userId}`)
+        .get(`https://in-out.onrender.com/api/users/details/${userId}`)
         .then((res) => {
           setUser1(res.data);
           console.log(user1);
@@ -62,7 +62,7 @@ function Outticket() {
     event.preventDefault();
     console.log(user); 
     axios
-      .post("http://localhost:8082/api/users/post_new_out_ticket", user)
+      .post("https://in-out.onrender.com/api/users/post_new_out_ticket", user)
       .then((response) => {
         console.log(response);
         localStorage.setItem('ticketId', response.data._id);

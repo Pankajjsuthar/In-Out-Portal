@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './ticket.css'
-let backendURL = "http://localhost:8082";
+let backendURL = "https://in-out.onrender.com";
 
 const Ticket = ({ id, name, entryNo, mobileNo, requestType, imageSrc, status1, place }) => {
   const [status, setStatus] = useState(status1);
 
   const handleApprove = async () => {
     try {
-      const response = await axios.put(`http://localhost:8082/api/users/approve/${id}`, {
+      const response = await axios.put(`https://in-out.onrender.com/api/users/approve/${id}`, {
         status: 'approved',
       });
       setStatus(response.data.status);
@@ -19,7 +19,7 @@ const Ticket = ({ id, name, entryNo, mobileNo, requestType, imageSrc, status1, p
 
   const handleReject = async () => {
     try {
-      const response = await axios.put(`http://localhost:8082/api/users/reject/${id}`, {
+      const response = await axios.put(`https://in-out.onrender.com/api/users/reject/${id}`, {
         status: 'rejected',
       });
       setStatus(response.data.status);

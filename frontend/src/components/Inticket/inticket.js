@@ -20,7 +20,7 @@ function Inticket() {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:8082/api/users/details/${userId}`)
+        .get(`https://in-out.onrender.com/api/users/details/${userId}`)
         .then((res) => {
           setUser1(res.data);
           console.log(user1);
@@ -61,7 +61,7 @@ function Inticket() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8082/api/users/post_new_in_ticket", user)
+      .post("https://in-out.onrender.com/api/users/post_new_in_ticket", user)
       .then((response) => {
         console.log(response);
         localStorage.setItem('ticketId', response.data._id);

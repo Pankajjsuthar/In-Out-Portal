@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./dashboard.css";
 import { useNavigate } from "react-router-dom";
-let backendURL = "http://localhost:8082";
+let backendURL = "https://in-out.onrender.com";
 
 function changeDateFormat(date1) {
   const date = new Date(date1);
@@ -45,11 +45,11 @@ const Dashboard = () => {
     let userId = localStorage.getItem("userId");
     // Fetch user data from backend API
     axios
-      .get("http://localhost:8082/api/users/details/" + userId)
+      .get("https://in-out.onrender.com/api/users/details/" + userId)
       .then((res) => setUser(res.data));
     // Fetch user's history from backend API
     axios
-      .get(`http://localhost:8082/api/users/details/${userId}/history`)
+      .get(`https://in-out.onrender.com/api/users/details/${userId}/history`)
       .then((res) => {
         let his = res.data;
         his.reverse();
@@ -199,7 +199,7 @@ export default Dashboard;
 // import axios from "axios";
 // import "./dashboard.css";
 // import { useNavigate } from "react-router-dom";
-// let backendURL = "http://localhost:8082";
+// let backendURL = "https://in-out.onrender.com";
 
 // function changeDateFormat(date1) {
 //   const date = new Date(date1);
@@ -241,11 +241,11 @@ export default Dashboard;
 //     let userId = localStorage.getItem("userId");
 //     // Fetch user data from backend API
 //     axios
-//       .get("http://localhost:8082/api/users/details/" + userId)
+//       .get("https://in-out.onrender.com/api/users/details/" + userId)
 //       .then((res) => setUser(res.data));
 //     // Fetch user's history from backend API
 //     axios
-//       .get(`http://localhost:8082/api/users/details/${userId}/history`)
+//       .get(`https://in-out.onrender.com/api/users/details/${userId}/history`)
 //       .then((res) => {
 //         let his = res.data;
 //         his.reverse();

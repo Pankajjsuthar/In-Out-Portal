@@ -14,7 +14,7 @@ const GuardPage = () => {
     const fetchTickets = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8082/api/users/get_all_tickets"
+          "https://in-out.onrender.com/api/users/get_all_tickets"
         );
         setTickets(response.data);
       } catch (error) {}
@@ -26,7 +26,7 @@ const GuardPage = () => {
   const handleTicketStatusChange = async (entryNo, newStatus) => {
     try {
       await axios.put(
-        `http://localhost:8082/api/users/update_ticket/${entryNo}`,
+        `https://in-out.onrender.com/api/users/update_ticket/${entryNo}`,
         { status: newStatus }
       );
       const updatedTickets = tickets.map((ticket) => {

@@ -41,7 +41,7 @@ function Signup() {
     newForm.append("file", avatar);
 
     axios
-      .post("http://localhost:8082/api/users/register-new-user", newForm, config)
+      .post("https://in-out.onrender.com/api/users/register-new-user", newForm, config)
       .then((res) => {
         setName("");
         setEmail("");

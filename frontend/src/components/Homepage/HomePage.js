@@ -11,7 +11,7 @@ function Homepage() {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:8082/api/users/details/${userId}`)
+        .get(`https://in-out.onrender.com/api/users/details/${userId}`)
         .then((res) => {
           setUser(res.data);
         })
