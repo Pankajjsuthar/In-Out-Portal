@@ -77,8 +77,9 @@ function Signup() {
           <div className="form-group">
             <label>Email</label>
             <input
-              type="email"
+              type="text"
               name="email"
+              pattern="^[a-zA-Z0-9._%+-]+@iitrpr\.ac\.in$"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
